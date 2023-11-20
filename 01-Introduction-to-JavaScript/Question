@@ -47,3 +47,54 @@ console.log(result1); // Output: string
 // Example 2
 let result2 = detectiveMax("Hello, JavaScriptville!");
 console.log(result2); // Output: string
+
+// Question - 3
+
+Sum two numbers
+
+In the serene countryside of Mathland, there were two young friends, Lily and Ethan, who loved exploring the beauty of numbers. One sunny afternoon, they stumbled upon an ancient mathematical scroll with a mysterious challenge.
+The scroll contained a mystical function named calculateSum, which took two numbers as input and returned their harmonious sum. With excitement in their eyes, Lily and Ethan set out to solve the riddle and uncover the magic hidden within the function.
+Can you help Lily and Ethan complete the calculateSum function to unveil the harmonious sum of the two numbers?
+Example 1:
+Input:
+2, 3
+Output:
+5
+
+// Solution 
+
+function calculateSum(num1, num2) {
+  // Add the two numbers and return the sum
+  return num1 + num2;
+}
+
+// Example usage:
+const result = calculateSum(2, 3);
+console.log(result); // Output: 5
+
+// Question - 4
+
+The Truth Detector
+
+In the technologically advanced city of Codeville, there was a clever programmer named Ava who created a truth-detecting algorithm. To test its powers, she embarked on a mission to determine the truthfulness of a statement.
+The statement was represented by a variable named isTrue, which contained a boolean value. Ava's task was to log the data type of this variable to the console, unlocking the key to the statement's truth.
+Can you assist Ava in this important mission by writing a code snippet to reveal the data type of isTrue and uncover the mystery?
+Example 1:
+Input:
+true
+Output:
+boolean
+
+Example 2:
+Input:
+false
+Output:
+boolean
+
+// Solution
+
+// Given statement
+var isTrue = true; // or false
+
+// Determine the data type and log it to the console
+console.log(typeof isTrue);
