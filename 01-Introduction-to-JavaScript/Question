@@ -14,3 +14,36 @@ const color = prompt("Please enter your favorite color:");
 
 // 2. Using string interpolation, print a message to the console
 console.log(`Your name is ${name}, you are ${age} years old, and your favorite color is ${color}`);
+
+// Question - 2
+
+The Data Detective
+
+In the charming village of JavaScriptville, a young detective named Max was known for solving mysterious data cases. One day, the villagers approached Max with an intriguing challenge. They had a magical box that could contain anything - numbers, strings, arrays, or even objects. However, the villagers were unsure about the contents inside the box.
+Max's task was to determine the type of the input inside the magical box and report back with the result.
+
+Example 1:
+Input:
+"4"
+Output:
+string
+
+Example 2:
+Input:
+Hello, JavaScriptville!
+Output:
+string
+
+// Solution
+
+function detectiveMax(magicalBox) {
+    return typeof magicalBox;
+}
+
+// Example 1
+let result1 = detectiveMax("4");
+console.log(result1); // Output: string
+
+// Example 2
+let result2 = detectiveMax("Hello, JavaScriptville!");
+console.log(result2); // Output: string
