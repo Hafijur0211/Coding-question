@@ -1,1 +1,16 @@
+// Question - 1
 
+Write a program that asks the user to enter their name, age, and favorite color.
+Store each of these values in a separate variable.
+Then, using string interpolation, print a message to the console that says, Your name is {name}, you are {age} years old, and your favorite color is {color}"
+Be sure to use the variables you created in the message.
+
+// Solution
+
+// 1. Ask the user to enter their name, age, and favorite color
+const name = prompt("Please enter your name:");
+const age = prompt("Please enter your age:");
+const color = prompt("Please enter your favorite color:");
+
+// 2. Using string interpolation, print a message to the console
+console.log(`Your name is ${name}, you are ${age} years old, and your favorite color is ${color}`);
