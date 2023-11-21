@@ -1,1 +1,102 @@
+// Question - 1
 
+Number is even or not
+
+Once upon a time, there was a young boy named William who loved to play with blocks. He would spend hours building towers and castles with his colorful blocks. One day, he decided to build a tower using only even numbers of blocks. He wanted to make sure each layer of his tower had an even number of blocks, but he didn’t know how to check if a number was even or not.
+Writing a function that takes a number as input and returns true if it is an even number, and false otherwise. This will help William determine if he can use that number of blocks in his tower.
+Example 1:
+Input:
+4
+Output:
+true
+Example 2:
+Input:
+5
+Output:
+false
+
+// Solution
+
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+// Example 1
+console.log(isEven(4)); // Output: true
+
+// Example 2
+console.log(isEven(5)); // Output: false
+
+// Question - 2
+
+Nature of number
+
+Once upon a time, there was a magical function that could determine the nature of numbers. It had the power to analyze whether a number was positive, negative, or even zero. With this knowledge, it would whisper a message, revealing the true essence of the number to anyone who sought its guidance. 
+Write the function which determine the nature of numbers.
+Example 1:
+Input:
+5
+Output:
+Positive
+Example 2:
+Input:
+-5
+Output:
+Negative
+Example 3:
+Input:
+0
+Output:
+Zero
+
+// Solution
+
+function determineNatureOfNumber(number) {
+    if (number > 0) {
+        return "Positive";
+    } else if (number < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+// Examples
+console.log(determineNatureOfNumber(5));  // Output: Positive
+console.log(determineNatureOfNumber(-5)); // Output: Negative
+console.log(determineNatureOfNumber(0));  // Output: Zero
+
+// Question - 3
+
+Minute converter
+Imagine you have a magical time converter. It takes a number of minutes as input and instantly transforms it into the equivalent number of seconds.
+Write a function that to help people calculate how many seconds are in a given number of minutes.
+Example 1:
+Input:
+3
+Output:
+180
+Example 2:
+Input:
+0
+Output:
+0
+
+// Solution
+
+function minutesToSeconds(minutes) {
+    // Check if the input is a valid number
+    if (typeof minutes !== 'number' || isNaN(minutes)) {
+        return "Invalid input. Please enter a valid number of minutes.";
+    }
+
+    // Convert minutes to seconds
+    var seconds = minutes * 60;
+
+    return seconds;
+}
+
+// Examples
+console.log(minutesToSeconds(3)); // Output: 180
+console.log(minutesToSeconds(0)); // Output: 0
+console.log(minutesToSeconds("abc")); // Output: Invalid input. Please enter a valid number of minutes.
