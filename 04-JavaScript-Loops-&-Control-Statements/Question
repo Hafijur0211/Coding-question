@@ -1,0 +1,75 @@
+// JavaScript Loops & Control Statements
+
+// For Loop
+
+for (initialization; condition; increment / decrement) {
+  // code to be executed
+}
+
+// Example
+
+const numbers = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
+}
+
+// Example 1: Display a Text Five Times
+
+// program to display text 5 times
+for (let i = 0; i < 5; i++) {
+  console.log("Hello, world!");
+}
+
+// Output
+Hello, world!
+Hello, world!
+Hello, world!
+Hello, world!
+Hello, world!
+
+// Example 2: To Display Numbers from 1 to 5
+
+// write a program to display numbers from 1 to 5
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+// Output
+1
+2
+3
+4
+5
+
+// Infinite for loop
+
+// Example
+
+// infinite for loop
+for (; ;) {
+  console.log("This loop will run indefinitely!");
+}
+
+// For...in loop
+
+for (let variable in object) {
+  // code to be executed for each value in iterable
+}
+
+// Here's an example of a for...in loop:
+
+let person = {
+  name: 'Alice',
+  age: 25,
+  city: 'New York'
+};
+
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+// Output
+name: Alice
+age: 25
+city: New York
