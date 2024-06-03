@@ -81,3 +81,55 @@ Example usage:
 //   Note: There is a known quirk in JavaScript where typeof null returns "object".
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question 2
+
+// Sum two numbers
+
+// In the serene countryside of Mathland, there were two young friends, Lily and Ethan, who loved exploring the beauty of numbers. One sunny afternoon, they stumbled upon an ancient mathematical scroll with a mysterious challenge.
+// The scroll contained a mystical function named calculateSum, which took two numbers as input and returned their harmonious sum. With excitement in their eyes, Lily and Ethan set out to solve the riddle and uncover the magic hidden within the function.
+// Can you help Lily and Ethan complete the calculateSum function to unveil the harmonious sum of the two numbers?
+
+// Example 1:
+// Input:
+// 2, 3
+// Output:
+// 5
+
+// Solution using function 
+
+/*
+function calculateSum(num1, num2) {
+    return num1 + num2;
+  }
+  
+  Example usage:
+
+  console.log(calculateSum(2, 3)); // Output: 5
+  console.log(calculateSum(10, 15)); // Output: 25
+  console.log(calculateSum(-5, 7)); // Output: 2
+*/
+
+// Explanation:
+// The calculateSum function is defined to accept two parameters, num1 and num2.
+// Inside the function, we return the sum of num1 and num2 using the + operator.
+// The function can be called with any two numbers, and it will return their sum.
+
+// Solution without using function
+
+/*
+// Example inputs
+let num1 = 2;
+let num2 = 3;
+
+// Calculating the sum directly
+let sum = num1 + num2;
+
+// Output the result
+console.log(sum); // Output: 5
+*/
+
+// Explanation:
+// We define two variables, num1 and num2, and assign them the values 2 and 3, respectively.
+// We then calculate the sum of these two variables using the + operator and store the result in the variable sum.
+// Finally, we print the value of sum to the console, which gives the result 5.
