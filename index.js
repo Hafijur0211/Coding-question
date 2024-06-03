@@ -61,7 +61,7 @@ console.log(typeof input8); // Output: undefined
 function determineType(input) {
     return typeof input;
   }
-  
+
 Example usage:
 
   console.log(determineType("4")); // Output: string
@@ -84,25 +84,27 @@ Example usage:
 
 // Question 2
 
-// Sum two numbers
+/*
+Sum two numbers
 
-// In the serene countryside of Mathland, there were two young friends, Lily and Ethan, who loved exploring the beauty of numbers. One sunny afternoon, they stumbled upon an ancient mathematical scroll with a mysterious challenge.
-// The scroll contained a mystical function named calculateSum, which took two numbers as input and returned their harmonious sum. With excitement in their eyes, Lily and Ethan set out to solve the riddle and uncover the magic hidden within the function.
-// Can you help Lily and Ethan complete the calculateSum function to unveil the harmonious sum of the two numbers?
+In the serene countryside of Mathland, there were two young friends, Lily and Ethan, who loved exploring the beauty of numbers. One sunny afternoon, they stumbled upon an ancient mathematical scroll with a mysterious challenge.
+The scroll contained a mystical function named calculateSum, which took two numbers as input and returned their harmonious sum. With excitement in their eyes, Lily and Ethan set out to solve the riddle and uncover the magic hidden within the function.
+Can you help Lily and Ethan complete the calculateSum function to unveil the harmonious sum of the two numbers?
 
-// Example 1:
-// Input:
-// 2, 3
-// Output:
-// 5
+Example 1:
+Input:
+2, 3
+Output:
+5
+*/
 
-// Solution using function 
+// Solution using function
 
 /*
 function calculateSum(num1, num2) {
     return num1 + num2;
   }
-  
+
   Example usage:
 
   console.log(calculateSum(2, 3)); // Output: 5
