@@ -135,3 +135,69 @@ console.log(sum); // Output: 5
 // We define two variables, num1 and num2, and assign them the values 2 and 3, respectively.
 // We then calculate the sum of these two variables using the + operator and store the result in the variable sum.
 // Finally, we print the value of sum to the console, which gives the result 5.
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 3
+
+/*
+The Truth Detector
+
+In the technologically advanced city of Codeville, there was a clever programmer named Ava who created a truth-detecting algorithm. To test its powers, she embarked on a mission to determine the truthfulness of a statement.
+The statement was represented by a variable named isTrue, which contained a boolean value. Ava's task was to log the data type of this variable to the console, unlocking the key to the statement's truth.
+Can you assist Ava in this important mission by writing a code snippet to reveal the data type of isTrue and uncover the mystery?
+
+Example 1:
+Input:
+true
+
+Output:
+boolean
+
+Example 2:
+Input:
+false
+
+Output:
+boolean
+
+*/
+
+// Solution using function
+
+/*
+function detectTruthType(isTrue) {
+    console.log(typeof isTrue);
+  }
+  
+  Example usage:
+
+  detectTruthType(true);  // Output: boolean
+  detectTruthType(false); // Output: boolean
+*/
+
+// Explanation:
+// The detectTruthType function is defined to accept one parameter, isTrue.
+// Inside the function, the typeof operator is used to determine the data type of the isTrue variable.
+// The data type is then logged to the console using console.log.
+// By calling the detectTruthType function with different boolean values, the data type "boolean" is logged to the console for both true and false inputs.
+
+// Solution without using function
+
+/*
+// Example inputs
+let isTrue1 = true;
+let isTrue2 = false;
+
+// Using `typeof` to log the data type of the variable isTrue
+console.log(typeof isTrue1); // Output: boolean
+console.log(typeof isTrue2); // Output: boolean
+*/
+
+// Explanation:
+// typeof isTrue1 returns "boolean" because isTrue1 is assigned the value true, which is a boolean.
+// typeof isTrue2 returns "boolean" because isTrue2 is assigned the value false, which is a boolean.
+// The typeof operator is used to determine the data type of the variable and log it to the console.
+// This code snippet will log the data type of the isTrue variable, which in both cases will be "boolean".
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
