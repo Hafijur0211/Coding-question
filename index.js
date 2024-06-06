@@ -201,3 +201,251 @@ console.log(typeof isTrue2); // Output: boolean
 // This code snippet will log the data type of the isTrue variable, which in both cases will be "boolean".
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 4
+
+/*
+Number is even or not
+
+Once upon a time, there was a young boy named William who loved to play with blocks. He would spend hours building towers and castles with his colorful blocks. One day, he decided to build a tower using only even numbers of blocks. He wanted to make sure each layer of his tower had an even number of blocks, but he didn’t know how to check if a number was even or not.
+Writing a function that takes a number as input and returns true if it is an even number, and false otherwise. This will help William determine if he can use that number of blocks in his tower.
+
+Example 1:
+Input:
+4
+Output:
+true
+
+Example 2:
+Input:
+5
+Output:
+false
+*/
+
+// Using function 
+
+/*
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+// Example usage:
+console.log(isEven(4)); // Output: true
+console.log(isEven(5)); // Output: false
+*/
+
+// This function works by using the modulo operator (%). If the remainder when number is divided by 2 is 0, then the number is even; otherwise, it is odd.
+
+// Without using function
+
+/*
+// Example 1:
+let number1 = 4;
+let isEven1 = number1 % 2 === 0;
+console.log(isEven1); // Output: true
+
+// Example 2:
+let number2 = 5;
+let isEven2 = number2 % 2 === 0;
+console.log(isEven2); // Output: false
+*/
+
+// In these examples, the isEven variable holds the result of the expression number % 2 === 0, which checks if the number is even. This result is then printed to the console.
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 5
+
+/*
+Nature of number
+
+Once upon a time, there was a magical function that could determine the nature of numbers. It had the power to analyze whether a number was positive, negative, or even zero. With this knowledge, it would whisper a message, revealing the true essence of the number to anyone who sought its guidance. 
+Write the function which determine the nature of numbers.
+Example 1:
+Input:
+5
+Output:
+Positive
+Example 2:
+Input:
+-5
+Output:
+Negative
+Example 3:
+Input:
+0
+Output:
+Zero
+*/
+
+// Using function 
+
+/*
+function determineNature(number) {
+  if (number > 0) {
+      return "Positive";
+  } else if (number < 0) {
+      return "Negative";
+  } else {
+      return "Zero";
+  }
+}
+
+// Example usage:
+console.log(determineNature(5));  // Output: Positive
+console.log(determineNature(-5)); // Output: Negative
+console.log(determineNature(0));  // Output: Zero
+*/
+
+// This determineNature function takes a number as input and returns a string indicating whether the number is positive, negative, or zero. The function uses simple conditional statements to evaluate the nature of the number.
+
+// without using function 
+
+/*
+// Example 1:
+let number1 = 5;
+let nature1;
+if (number1 > 0) {
+    nature1 = "Positive";
+} else if (number1 < 0) {
+    nature1 = "Negative";
+} else {
+    nature1 = "Zero";
+}
+console.log(nature1); // Output: Positive
+
+// Example 2:
+let number2 = -5;
+let nature2;
+if (number2 > 0) {
+    nature2 = "Positive";
+} else if (number2 < 0) {
+    nature2 = "Negative";
+} else {
+    nature2 = "Zero";
+}
+console.log(nature2); // Output: Negative
+
+// Example 3:
+let number3 = 0;
+let nature3;
+if (number3 > 0) {
+    nature3 = "Positive";
+} else if (number3 < 0) {
+    nature3 = "Negative";
+} else {
+    nature3 = "Zero";
+}
+console.log(nature3); // Output: Zero
+*/
+
+// In each example, we determine the nature of the number using conditional statements and store the result in a variable. Then, we print the result to the console.
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 6
+
+/*
+Minute converter
+
+Imagine you have a magical time converter. It takes a number of minutes as input and instantly transforms it into the equivalent number of seconds.
+Write a function that to help people calculate how many seconds are in a given number of minutes.
+Example 1:
+Input:
+3
+Output:
+180
+Example 2:
+Input:
+0
+Output:
+0
+*/
+
+
+// using function 
+
+/*
+function minutesToSeconds(minutes) {
+  return minutes * 60;
+}
+
+// Example usage:
+console.log(minutesToSeconds(3)); // Output: 180
+console.log(minutesToSeconds(0)); // Output: 0
+*/
+
+// This minutesToSeconds function takes the number of minutes as input and returns the equivalent number of seconds by multiplying the input by 60.
+
+// without using function
+
+/*
+// Example 1:
+let minutes1 = 3;
+let seconds1 = minutes1 * 60;
+console.log(seconds1); // Output: 180
+
+// Example 2:
+let minutes2 = 0;
+let seconds2 = minutes2 * 60;
+console.log(seconds2); // Output: 0
+*/
+
+// In these examples, we directly multiply the number of minutes by 60 to get the number of seconds and then print the result to the console.
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Question 4
+
+/*
+Palindrome Strings
+
+Sarah is a web developer who wants to create a JavaScript function to check if a given string is a palindrome. She wants to use this function to build a feature that validates whether user input is a palindrome.
+Help Sarah by writing a JavaScript function named isPalindrome that takes a string as input and returns true if the string is a palindrome and false otherwise.
+
+Example 1:
+Input: "racecar"
+Output: true
+
+Example 2:
+Input: "hello"
+Output: false
+*/
+
+// Solution
+
+/*
+function isPalindrome(str) {
+    // Remove non-alphanumeric characters and convert to lowercase
+    let cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    
+    // Compare the cleaned string with its reverse
+    let reversedStr = cleanedStr.split('').reverse().join('');
+    
+    return cleanedStr === reversedStr;
+}
+
+// Example usage:
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello"));   // Output: false
+*/
+
+// Explanation:
+// Cleaning the String:
+
+// str.replace(/[^A-Za-z0-9]/g, ''): Removes all non-alphanumeric characters.
+// .toLowerCase(): Converts the cleaned string to lowercase.
+// Reversing the String:
+
+// split(''): Splits the string into an array of characters.
+// reverse(): Reverses the array.
+// join(''): Joins the reversed array back into a string.
+// Comparison:
+
+// cleanedStr === reversedStr: Checks if the cleaned string is the same as its reversed version.
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
