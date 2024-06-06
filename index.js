@@ -616,3 +616,80 @@ console.log(oddOrEvenSum([10, 20, 30, 40, 50])); // Output: { oddSum: 0, evenSum
 console.log(oddOrEvenSum([7, 13, 42, 31, 55])); // Output: { oddSum: 106, evenSum: 42 }
 
 */
+
+// Question 11
+
+/*
+
+The Grade Distributor
+
+In a kingdom where knowledge was highly cherished, the wise scholars developed a system to grade students based on their academic performance. They assigned letter grades "A", "B", "C", "D", and "F" to represent different levels of achievement.
+The kingdom needed a function that would analyze a set of numerical scores and distribute the corresponding letter grades to each student. They sought a skilled JavaScript sorcerer to create the distributeGrades function.
+The distributeGrades function would take an array of numerical scores as input and return an object containing the count of grades distributed as "A", "B", "C", "D", and "F", respectively, based on the following scale:
+Scores from 90 to 100 would receive an "A". Scores from 80 to 89 would receive a "B". Scores from 70 to 79 would receive a "C". Scores from 60 to 69 would receive a "D". Scores below 60 would receive an "F". Eager to leave a mark on the kingdom's education system, the JavaScript sorcerer accepted the challenge. Utilizing decision statements, the sorcerer worked tirelessly to craft a solution that would efficiently distribute the grades and empower the kingdom's educators with valuable insights.
+Could you lend your coding expertise to assist the JavaScript sorcerer in completing the distributeGrades function and bestow the gift of knowledge upon the kingdom's students?
+
+Example 1
+Input:
+[85, 92, 78, 65, 95]
+
+Output:
+{ A: 2, B: 1, C: 1, D: 1, F: 0 }
+
+Example 2
+Input:
+[76, 81, 60, 55, 88}
+
+Output:
+{ A: 0, B: 2, C: 1, D: 1, F: 1 }
+
+Example 3
+Input:
+[92, 95, 87, 60, 72]
+
+Output:
+{ A: 2, B: 1, C: 1, D: 1, F: 0 }
+
+*/
+
+// Solution
+
+
+/*
+
+function distributeGrades(scores) {
+    // Initialize grade counts
+    let gradeCounts = {
+        A: 0,
+        B: 0,
+        C: 0,
+        D: 0,
+        F: 0
+    };
+
+    // Iterate through each score and distribute grades
+    for (let score of scores) {
+        if (score >= 90 && score <= 100) {
+            gradeCounts.A++;
+        } else if (score >= 80 && score <= 89) {
+            gradeCounts.B++;
+        } else if (score >= 70 && score <= 79) {
+            gradeCounts.C++;
+        } else if (score >= 60 && score <= 69) {
+            gradeCounts.D++;
+        } else {
+            gradeCounts.F++;
+        }
+    }
+
+    // Return the grade counts object
+    return gradeCounts;
+}
+
+// Example usage:
+console.log(distributeGrades([85, 92, 78, 65, 95])); // Output: { A: 2, B: 1, C: 1, D: 1, F: 0 }
+console.log(distributeGrades([76, 81, 60, 55, 88])); // Output: { A: 0, B: 2, C: 1, D: 1, F: 1 }
+console.log(distributeGrades([92, 95, 87, 60, 72])); // Output: { A: 2, B: 1, C: 1, D: 1, F: 0 }
+
+
+*/
