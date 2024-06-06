@@ -449,3 +449,119 @@ console.log(isPalindrome("hello"));   // Output: false
 // cleanedStr === reversedStr: Checks if the cleaned string is the same as its reversed version.
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 8
+
+/*
+The Sign of Product
+
+In a faraway land of mathematical wonders, a group of curious mathematicians found themselves pondering over the signs of products. They decided to embark on a coding journey to build a function that would determine the sign of the product of three given numbers.
+The mathematicians laid down the rules for the function called productSign:
+If the product is positive (greater than 0), the function should return 1. If the product is negative (less than 0), the function should return -1. If the product is zero, the function should return 0. The mathematicians were eager to see their function come to life and started coding in JavaScript. However, they faced some challenges in handling different scenarios.
+Can you use your coding prowess to assist the mathematicians in creating the function productSign and unraveling the mysteries of the signs of products?
+
+Example 1:
+Input:
+2, 3, 5
+
+Output:
+1
+
+Example 2:
+Input:
+-4, 6, 0
+
+Output:
+0
+
+Example 3:
+Input:
+-1, -2, -3
+
+Output:
+-1
+
+*/
+
+// Solution
+
+/*
+function productSign(a, b, c) {
+  let product = a * b * c;
+  
+  if (product > 0) {
+      return 1;
+  } else if (product < 0) {
+      return -1;
+  } else {
+      return 0;
+  }
+}
+
+// Example usage:
+console.log(productSign(2, 3, 5));    // Output: 1
+console.log(productSign(-4, 6, 0));   // Output: 0
+console.log(productSign(-1, -2, -3)); // Output: -1
+*/
+
+// Question - 9
+
+/*
+The Sign Checker
+
+In a land where mathematical wizards roamed, the people needed a function that could determine the signs of three given numbers and return the result as a string. They sought a JavaScript function to aid them in their quest.
+Write a JavaScript function called checkSign that takes three numbers as input and returns a string representing the signs of the numbers.
+If all three numbers are positive, return "+++" If two numbers are positive and one is negative, return "++-" If one number is positive and two are negative, return "+--" If all three numbers are negative, return "---"
+
+Example 1:
+Input:
+1, 2, 3
+
+Output:
+"+++"
+
+Example 2:
+Input:
+-1, 2, 3
+
+Output:
+"++-"
+
+Example 3:
+Input:
+-1, -2, 3
+
+Output:
+"+--"
+
+Example 4:
+Input:
+-1, -2, -3
+
+Output:
+"---"
+
+*/
+
+// Solution
+
+/*
+function checkSign(a, b, c) {
+  // Initialize an empty string to store the result
+  let result = '';
+  
+  // Check the sign of each number and append the corresponding character to the result string
+  result += (a > 0) ? '+' : '-';
+  result += (b > 0) ? '+' : '-';
+  result += (c > 0) ? '+' : '-';
+  
+  return result;
+}
+
+// Example usage:
+console.log(checkSign(1, 2, 3));    // Output: "+++"
+console.log(checkSign(-1, 2, 3));   // Output: "++-"
+console.log(checkSign(-1, -2, 3));  // Output: "+--"
+console.log(checkSign(-1, -2, -3)); // Output: "---"
+
+*/
