@@ -504,6 +504,8 @@ console.log(productSign(-4, 6, 0));   // Output: 0
 console.log(productSign(-1, -2, -3)); // Output: -1
 */
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Question - 9
 
 /*
@@ -566,6 +568,8 @@ console.log(checkSign(-1, -2, -3)); // Output: "---"
 
 */
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Question 10
 
 /*
@@ -616,6 +620,8 @@ console.log(oddOrEvenSum([10, 20, 30, 40, 50])); // Output: { oddSum: 0, evenSum
 console.log(oddOrEvenSum([7, 13, 42, 31, 55])); // Output: { oddSum: 106, evenSum: 42 }
 
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Question 11
 
@@ -693,3 +699,66 @@ console.log(distributeGrades([92, 95, 87, 60, 72])); // Output: { A: 2, B: 1, C:
 
 
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 12
+
+/*
+
+Simple Calculator
+
+Alice is a math teacher who wants to create a simple calculator using JavaScript. The calculator should be able to perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+Help Alice by creating a JavaScript function called simpleCalculator that takes two numbers and an operator (+, -, *, /) as input and returns the arithmetic operation result.
+
+// Test cases
+console.log(simpleCalculator(5, 2, '+')); // 7
+console.log(simpleCalculator(5, 2, '-')); // 3
+console.log(simpleCalculator(5, 2, '*')); // 10
+console.log(simpleCalculator(5, 2, '/')); // 2.5
+console.log(simpleCalculator(5, 0, '/')); // "Cannot divide by zero."
+console.log(simpleCalculator('5', 2, '+')); // "Invalid input. Please enter numeric values."
+console.log(simpleCalculator(5, 2, '&')); // "Unsupported operator. Please enter a valid operator (+, -, *, /)."
+
+*/
+
+// Solution
+
+/*
+function simpleCalculator(num1, num2, operator) {
+    // Check if inputs are numeric
+    if (isNaN(num1) || isNaN(num2)) {
+        return "Invalid input. Please enter numeric values.";
+    }
+
+    // Perform the arithmetic operation based on the operator
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            // Check if dividing by zero
+            if (num2 === 0) {
+                return "Cannot divide by zero.";
+            }
+            return num1 / num2;
+        default:
+            return "Unsupported operator. Please enter a valid operator (+, -, *, /).";
+    }
+}
+
+// Test cases
+console.log(simpleCalculator(5, 2, '+')); // 7
+console.log(simpleCalculator(5, 2, '-')); // 3
+console.log(simpleCalculator(5, 2, '*')); // 10
+console.log(simpleCalculator(5, 2, '/')); // 2.5
+console.log(simpleCalculator(5, 0, '/')); // "Cannot divide by zero."
+console.log(simpleCalculator('5', 2, '+')); // "Invalid input. Please enter numeric values."
+console.log(simpleCalculator(5, 2, '&')); // "Unsupported operator. Please enter a valid operator (+, -, *, /)."
+
+*/
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
