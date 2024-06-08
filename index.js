@@ -935,3 +935,178 @@ Split and Manipulate Array: Use splice to remove the last rotations elements fro
 
 Return the Result: Return the rotated array.
 */
+
+
+// Question - 16
+
+/*
+ The JSON Parser
+
+In a world of data exchange, the people need a JavaScript function that can parse JSON strings and convert them into JavaScript objects. They seek the power to transform their data structures seamlessly, enabling communication and understanding between systems.
+Write a JavaScript function called parseJSON that takes a JSON string as input and returns the corresponding JavaScript object. Assume that the input JSON string will always be valid.
+
+Example 1:
+Input:
+{"name": "John", "age": 30, "isStudent": true}
+
+Output:
+{ name: 'John', age: 30, isStudent: true }
+
+Example 2:
+Input:
+{"colors": ["red", "green", "blue"], "length": 3}
+
+Output:
+{ colors: ['red', 'green', 'blue'], length: 3 }
+
+Example 3:
+Input:
+{"colors": ["red", "green", "blue"], "length": 3}
+
+Output:
+{ colors: ['red', 'green', 'blue'], length: 3 }
+*/
+
+// Solution
+
+/*
+function parseJSON(jsonString) {
+  return JSON.parse(jsonString);
+}
+
+// Example usage
+const input1 = '{"name": "John", "age": 30, "isStudent": true}';
+const output1 = parseJSON(input1);
+console.log(output1); // Output: { name: 'John', age: 30, isStudent: true }
+
+const input2 = '{"colors": ["red", "green", "blue"], "length": 3}';
+const output2 = parseJSON(input2);
+console.log(output2); // Output: { colors: ['red', 'green', 'blue'], length: 3 }
+
+*/
+
+/*
+This function simply takes a JSON string as input and returns the corresponding JavaScript object using JSON.parse(). Since the input JSON string is assumed to always be valid, there's no need for additional error handling in this function.
+*/
+
+// Question - 17
+
+/*
+The Object Merger
+
+In a world of data amalgamation, the people need a JavaScript function that can merge two objects into a single, unified object. They seek to combine the strengths of multiple objects to create a comprehensive data structure.
+Write a JavaScript function called mergeObjects that takes two objects as inputs and returns a new object that combines the properties of both objects. If there are overlapping properties, the value from the second object should take precedence.
+
+Example 1:
+Input:
+{ "name": "John", "age": 30 }
+
+{ "isStudent": true, "age": 25 }
+
+Output:
+{ name: "John", age: 25, isStudent: true }
+Example 2:
+Input:
+{ "a": 1, "b": 2 } { "c": 3 }
+
+Output:
+{ a: 1, b: 2, c: 3 }
+*/
+
+// Solution
+
+// Using object spread syntax:
+
+/*
+function mergeObjects(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+// Example usage
+const input1 = { "name": "John", "age": 30 };
+const input2 = { "isStudent": true, "age": 25 };
+const output1 = mergeObjects(input1, input2);
+console.log(output1); // Output: { name: "John", age: 25, isStudent: true }
+
+const input3 = { "a": 1, "b": 2 };
+const input4 = { "c": 3 };
+const output2 = mergeObjects(input3, input4);
+console.log(output2); // Output: { a: 1, b: 2, c: 3 }
+
+*/
+
+// Question - 18
+
+/*
+The Nested Object Finder
+
+In a world of complex data structures, the people need a JavaScript function that can find the value of a given property within a nested object. They seek to explore the depths of their data and retrieve valuable information.
+Write a JavaScript function called findNestedValue that takes an object and a string representing the property path as inputs. The property path will be a dot-separated string, representing the hierarchy of nested properties.
+The function should return the value of the property if found within the nested object. If the property is not found or any intermediate property is not an object, the function should return null.
+
+Example 1:
+Input:
+{"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}}
+
+person.name
+
+Output:
+John
+
+Example 2:
+Input:
+{"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}}
+
+person.address.city
+
+Output:
+New York
+Example 3:
+Input:
+{"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}}
+
+person.address.postalCode
+
+Output:
+null
+*/
+
+/*
+function findNestedValue(obj, propertyPath) {
+  // Split the property path into an array of property names
+  const pathArray = propertyPath.split('.');
+
+  // Initialize a variable to hold the current object
+  let currentObj = obj;
+
+  // Iterate through the property names in the path
+  for (let propName of pathArray) {
+    // Check if the current object is not an object or if the property doesn't exist
+    if (typeof currentObj !== 'object' || !currentObj.hasOwnProperty(propName)) {
+      return null;
+    }
+    
+    // Update the current object to the value of the nested property
+    currentObj = currentObj[propName];
+  }
+
+  // Return the value of the last property in the path
+  return currentObj;
+}
+
+// Example usage
+const input1 = {"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}};
+console.log(findNestedValue(input1, "person.name")); // Output: John
+
+const input2 = {"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}};
+console.log(findNestedValue(input2, "person.address.city")); // Output: New York
+
+const input3 = {"person":{"name": "John","age": 30,"address": {"city": "New York","country":"USA"}}};
+console.log(findNestedValue(input3, "person.address.postalCode")); // Output: null
+
+*/
+
+
+/*
+This function splits the property path into an array of property names, then iterates through each property name, checking if the current object is an object and if the property exists. If any intermediate property is not found or is not an object, it returns null. Otherwise, it updates the current object to the value of the nested property. Finally, it returns the value of the last property in the path.
+*/
