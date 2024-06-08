@@ -810,6 +810,8 @@ function reverseWords(sentence) {
 
 // Returning the Result: The function returns the resulting string with the words in reverse order.
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Question -14
 
 /*
@@ -864,6 +866,8 @@ Reversing the String: The cleaned string is reversed by splitting it into an arr
 
 Comparing Strings: The function checks if the cleaned original string is equal to the reversed string. If they are equal, the function returns true, indicating that the input string is a palindrome; otherwise, it returns false.
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Question -15
 
@@ -936,6 +940,7 @@ Split and Manipulate Array: Use splice to remove the last rotations elements fro
 Return the Result: Return the rotated array.
 */
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Question - 16
 
@@ -989,6 +994,8 @@ console.log(output2); // Output: { colors: ['red', 'green', 'blue'], length: 3 }
 This function simply takes a JSON string as input and returns the corresponding JavaScript object using JSON.parse(). Since the input JSON string is assumed to always be valid, there's no need for additional error handling in this function.
 */
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 // Question - 17
 
 /*
@@ -1034,6 +1041,8 @@ const output2 = mergeObjects(input3, input4);
 console.log(output2); // Output: { a: 1, b: 2, c: 3 }
 
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // Question - 18
 
@@ -1110,3 +1119,5 @@ console.log(findNestedValue(input3, "person.address.postalCode")); // Output: nu
 /*
 This function splits the property path into an array of property names, then iterates through each property name, checking if the current object is an object and if the property exists. If any intermediate property is not found or is not an object, it returns null. Otherwise, it updates the current object to the value of the nested property. Finally, it returns the value of the last property in the path.
 */
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
