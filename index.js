@@ -762,3 +762,105 @@ console.log(simpleCalculator(5, 2, '&')); // "Unsupported operator. Please enter
 */
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 13
+
+/*
+The Word Reverser
+
+In a realm of linguistic marvels, a task has been bestowed upon you to create a JavaScript function that can reverse the order of words in a given string. The people of the realm are eager to explore the magic of word reversal to unlock hidden meanings within their sentences.
+Write a JavaScript function called reverseWords that takes a sentence (a string containing multiple words separated by spaces) as input and returns the sentence with the order of words reversed.
+
+Example 1:
+Input:
+"Hello, world!"
+
+Output:
+"world! Hello,"
+*/
+
+// Solution
+
+/*
+function reverseWords(sentence) {
+    // Split the sentence into words
+    const words = sentence.split(' ');
+  
+    // Reverse the array of words
+    const reversedWords = words.reverse();
+  
+    // Join the reversed array of words back into a string
+    const reversedSentence = reversedWords.join(' ');
+  
+    return reversedSentence;
+  }
+  
+  // Example usage
+  const input = "Hello, world!";
+  const output = reverseWords(input);
+  console.log(output); // Output: "world! Hello,"
+  
+  */
+
+// Splitting the Sentence: The input sentence is split into an array of words using the split(' ') method, where the delimiter is a space.
+
+// Reversing the Array: The array of words is then reversed using the reverse() method.
+
+// Joining the Words: The reversed array of words is joined back into a string using the join(' ') method, with a space as the delimiter.
+
+// Returning the Result: The function returns the resulting string with the words in reverse order.
+
+// Question -14
+
+/*
+Palindrome Detector
+
+In the mystical land of characters and strings, a group of adventurers seeks to identify palindromes—words or phrases that read the same forwards and backwards. To aid them in their quest, they need a JavaScript function that can determine whether a given string is a palindrome.
+Write a JavaScript function called isPalindrome that takes a string as input and returns true if it is a palindrome, and false otherwise.
+A palindrome is case-sensitive and should be read from left to right and right to left in the same way.
+
+Example 1:
+Input:
+"racecar"
+
+Output:
+true+
+
+Example 2:
+Input:
+"hello"
+
+Output:
+false
+*/
+
+/*
+function isPalindrome(str) {
+  // Remove non-alphanumeric characters and convert the string to lowercase
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+  // Reverse the cleaned string
+  const reversedStr = cleanStr.split('').reverse().join('');
+
+  // Check if the original string is equal to the reversed string
+  return cleanStr === reversedStr;
+}
+
+// Example usage
+const input1 = "racecar";
+const output1 = isPalindrome(input1);
+console.log(output1); // Output: true
+
+const input2 = "hello";
+const output2 = isPalindrome(input2);
+console.log(output2); // Output: false
+
+*/
+
+/*
+Cleaning the String: The input string is cleaned by removing all non-alphanumeric characters and converting it to lowercase, similar to the previous approach.
+
+Reversing the String: The cleaned string is reversed by splitting it into an array of characters, reversing the array, and then joining the characters back into a string.
+
+Comparing Strings: The function checks if the cleaned original string is equal to the reversed string. If they are equal, the function returns true, indicating that the input string is a palindrome; otherwise, it returns false.
+*/
