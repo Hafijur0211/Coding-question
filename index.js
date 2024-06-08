@@ -864,3 +864,74 @@ Reversing the String: The cleaned string is reversed by splitting it into an arr
 
 Comparing Strings: The function checks if the cleaned original string is equal to the reversed string. If they are equal, the function returns true, indicating that the input string is a palindrome; otherwise, it returns false.
 */
+
+// Question -15
+
+/*
+The Array Rotator
+
+In the land of cyclical arrays, the people need a JavaScript function that can rotate an array by a given number of positions to the right. They seek to shift their array elements in a circular manner, enabling them to explore new possibilities with their data.
+Write a JavaScript function called rotateArray that takes an array of integers and a positive integer k as inputs. The function should rotate the array k positions to the right.
+Note: The value of k can be greater than the length of the array, so multiple rotations might be needed.
+
+Example 1:
+Input:
+[1, 2, 3, 4, 5]
+
+2
+
+Output:
+
+[4, 5, 1, 2, 3]
+
+Example 2:
+
+[7, 8, 9]
+
+5
+
+Output:
+[ 8, 9, 7 ]
+*/
+
+// Solution
+
+/*
+function rotateArray(arr, k) {
+  // Calculate the effective number of rotations
+  const rotations = k % arr.length;
+
+  // If there are no rotations needed, return the original array
+  if (rotations === 0) {
+    return arr;
+  }
+
+  // Split the array into two parts based on the number of rotations
+  const rotatedPart = arr.splice(-rotations); // remove the last 'rotations' elements
+  arr.unshift(...rotatedPart); // add the removed elements to the beginning of the array
+
+  return arr;
+}
+
+// Example usage
+const input1 = [1, 2, 3, 4, 5];
+const k1 = 2;
+const output1 = rotateArray(input1, k1);
+console.log(output1); // Output: [4, 5, 1, 2, 3]
+
+const input2 = [7, 8, 9];
+const k2 = 5;
+const output2 = rotateArray(input2, k2);
+console.log(output2); // Output: [8, 9, 7]
+
+*/
+
+/*
+Calculate Effective Rotations: Similar to the previous implementation, calculate the effective number of rotations.
+
+Handle No Rotations: If no rotations are needed, return the original array.
+
+Split and Manipulate Array: Use splice to remove the last rotations elements from the array, and then use unshift along with the spread operator (...) to add the removed elements to the beginning of the array.
+
+Return the Result: Return the rotated array.
+*/
