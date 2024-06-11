@@ -1277,3 +1277,126 @@ Filter Method: Use the filter method on the numbers array to create a new array 
 Arrow Function: The filter method takes a callback function as an argument. This callback function takes each element (number) of the array and returns true if it matches the target, effectively filtering out all other elements.
 Length Property: Get the length of the resulting filtered array using the length property. This length represents the number of times the target appears in the original numbers array.
 */
+
+// Question - 22
+
+/*
+Addition with closures
+
+Once upon a time, there was a young boy named Jack who loved to play with numbers. He would spend hours adding, subtracting, multiplying and dividing numbers in his head. One day, he discovered a new game where he had to add a given number to another number as quickly as possible. He found the game challenging and fun, but wished there was an easier way to add the numbers without having to do the calculation every time.
+Can you help Jack by writing a closure function that takes a given number as a parameter and returns a new function that takes another number as a parameter and adds it to the given number?
+
+Example 1:
+Input: 3
+Output: 8
+
+Example 2:
+Input: 7
+Output: 12
+*/
+
+/*
+function createAdder(firstNumber) {
+    return function(secondNumber) {
+        return firstNumber + secondNumber;
+    };
+}
+
+// Example usage:
+const addFive = createAdder(5);
+console.log(addFive(3)); // Output: 8
+
+const addSeven = createAdder(7);
+console.log(addSeven(5)); // Output: 12
+
+*/
+
+/*
+Explanation:
+
+Outer Function (createAdder): This function takes a parameter firstNumber and returns an inner function.
+Inner Function: The inner function takes another parameter secondNumber and returns the sum of firstNumber and secondNumber.
+Closure: The inner function has access to the variables of the outer function even after the outer function has returned. This is what makes it a closure.
+Example Usage: When you call createAdder(5), it returns a function that will add 5 to any number you pass to it. Similarly, createAdder(7) returns a function that will add 7 to any number you pass to it.
+*/
+
+// Question 23
+
+/*
+
+Second smallest number
+
+Once upon a time, there was a young girl named Lily who loved to bake cookies. She would spend hours in the kitchen, mixing ingredients and trying out new recipes. One day, she decided to have a cookie baking competition with her friends. Each friend would bring their best batch of cookies, and they would all taste and judge each other’s cookies. Lily wanted to give a prize to the friend who baked the second-best batch of cookies, but she didn’t know how to determine the winner.
+Can you help Lily by writing a function that takes an array of integers representing the scores given by the judges to each batch of cookies, and returns the second smallest number, representing the score of the second-best batch of cookies?
+Example 1:
+Input: num = [5, 2, 8, 1, 9]
+Output: 2
+
+*/
+
+/*
+
+function secondSmallest(nums) {
+    if (nums.length < 2) {
+        throw new Error("Array must contain at least two elements");
+    }
+    
+    // Sort the array in ascending order
+    nums.sort((a, b) => a - b);
+    
+    // Return the second smallest element
+    return nums[1];
+}
+
+// Example usage:
+console.log(secondSmallest([5, 2, 8, 1, 9])); // Output: 2
+console.log(secondSmallest([3, 4, 1, 2])); // Output: 2
+console.log(secondSmallest([10, 10, 10, 10])); // Output: 10 (if duplicates are treated as unique)
+
+
+
+*/
+
+/*
+
+Explanation:
+Input Validation: Check if the array has at least two elements. If not, throw an error because it's impossible to find the second smallest element in an array with fewer than two elements.
+Sorting: Use the sort method to sort the array in ascending order. The comparison function (a, b) => a - b ensures numerical sorting.
+Return the Second Smallest Element: After sorting, the second smallest element is at index 1 (the second position) in the array.
+
+*/
+
+// Question 24
+
+/*
+Removing Duplicates
+
+Once upon a time, there was a young boy named Max who loved to collect stamps. He would spend hours sorting through his collection, admiring the different designs and colors. One day, he decided to organize his collection by removing any duplicate stamps. He started going through his collection one stamp at a time, but soon realized that it was taking too long. He wished there was an easier way to remove the duplicates and keep only the unique stamps.
+Can you help Max by writing a function that accepts an array of numbers representing the different stamps in his collection, and returns a new array with only the unique numbers, representing the unique stamps in his collection?
+Example 1:
+Input: nums = [1, 2, 3, 2, 4, 4, 5]
+Output: [1, 2, 3, 4, 5]
+*/
+
+/*
+
+function removeDuplicates(nums) {
+    // Create a new Set from the array to remove duplicates
+    const uniqueNums = new Set(nums);
+    
+    // Convert the Set back to an array
+    return [...uniqueNums];
+}
+
+// Example usage:
+console.log(removeDuplicates([1, 2, 3, 2, 4, 4, 5])); // Output: [1, 2, 3, 4, 5]
+
+
+*/
+
+/*
+Explanation:
+Set: A Set is a collection of unique values. When you create a Set from an array, it automatically removes any duplicate values.
+Spread Operator (...): The spread operator is used to convert the Set back into an array.
+Function: The removeDuplicates function takes an array (nums) as input, converts it to a Set to remove duplicates, and then converts it back to an array using the spread operator.
+*/
