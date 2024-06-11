@@ -1121,3 +1121,159 @@ This function splits the property path into an array of property names, then ite
 */
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Question - 19
+
+/*
+Full Name
+
+In a small town, there was a young girl named Emma who loved to write stories. One day, her teacher gave her a challenge. She was asked to write a function called getFullName() that could take a first name and a last name as parameters and return the full name as a string.
+Emma knew that a full name is the combination of a person's first name and last name. She set out to solve the problem and write a function called getFullName() that could take a first name and last name as parameters and return the full name as a string.
+Can you help Emma solve this problem? Can you write a function called getFullName() that takes a first name and last name as parameters and returns the full name as a string?
+
+Example 1:
+Input: firstName = "John" lastName = "Doe"
+Output: "John Doe"
+
+Example 2:
+Input: firstName = "Alice" lastName = "Smith"
+Output: "Alice Smith"
+*/
+
+/*
+
+function getFullName(firstName, lastName) {
+    return firstName + " " + lastName;
+}
+
+// Example usage:
+console.log(getFullName("John", "Doe")); // Output: "John Doe"
+console.log(getFullName("Alice", "Smith")); // Output: "Alice Smith"
+
+
+*/
+
+/*
+In this function, getFullName takes two parameters, firstName and lastName, and returns a string that combines them with a space in between. This is the simplest way to achieve the desired functionality.
+*/
+
+// Question - 19
+
+/*
+Find a Prime
+
+In a land of numbers and mathematics, there was a young boy named Isaac who loved to solve puzzles and problems. One day, his teacher gave him a challenge. He was asked to write a function called isPrime() that could take a number as a parameter and return true if it was a prime number, and false otherwise.
+Isaac knew that a prime number is a positive integer greater than 1 that is divisible by only 1 and itself. He set out to solve the problem and write a function called isPrime() that could take a number as a parameter and determine if it was a prime number.
+Can you help Isaac solve this problem? Can you write a function called isPrime() that takes a number as a parameter and returns true if it is a prime number, and false otherwise?
+
+Example 1:
+Input: 7
+Output: true
+
+Example 2:
+Input: 12
+Output: false
+*/
+
+/*
+
+function isPrime(number) {
+    // A prime number is greater than 1
+    if (number <= 1) {
+        return false;
+    }
+    
+    // Check for factors from 2 up to the square root of the number
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    
+    // If no factors are found, the number is prime
+    return true;
+}
+
+// Example usage:
+console.log(isPrime(7));  // Output: true
+console.log(isPrime(12)); // Output: false
+
+
+*/
+
+/*
+Explanation:
+
+Initial Check: If the number is less than or equal to 1, it's not prime.
+Loop to Check Divisors: We loop from 2 up to the square root of the number. The reason for going only up to the square root is that if n = a * b, then one of the factors (a or b) must be less than or equal to the square root of n. This reduces the number of iterations and makes the function more efficient.
+Divisibility Check: Inside the loop, if the number is divisible by any of these values, it's not a prime number.
+Return Result: If no divisors are found, the number is prime.
+This method is efficient and works well for the purpose of checking prime numbers.
+*/
+
+// Question - 21
+
+/*
+
+ Number of Occurrences
+
+Once upon a time, there was a young girl named Alice who loved to collect seashells. Every day, she would go to the beach and gather as many seashells as she could find. One day, she decided to count how many of each type of seashell she had collected. She laid out all her seashells in a row and started counting, but soon realized that it was taking too long. She wished there was an easier way to count the occurrences of each type of seashell in her collection.
+Can you help Alice by writing a function countOccurrences() that takes an array of numbers representing the different types of seashells and a target number representing the type of seashell she wants to count, and returns the number of times the target number appears in the array?
+Example 1:
+Input: numbers = [1, 2, 3, 4, 2, 5, 2] target = 2
+Output: 3
+
+Example 2:
+Input: numbers = numbers = [1, 1, 1, 1] target = 5
+Output: 0
+
+*/
+
+/*
+
+function countOccurrences(numbers, target) {
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === target) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Example usage:
+console.log(countOccurrences([1, 2, 3, 4, 2, 5, 2], 2)); // Output: 3
+console.log(countOccurrences([1, 1, 1, 1], 5)); // Output: 0
+
+
+*/
+
+/*
+
+Initialize a Counter: Start by initializing a variable count to 0. This will keep track of the number of times the target appears in the array.
+Loop Through the Array: Use a for loop to iterate through each element of the array.
+Check Each Element: Inside the loop, use an if statement to check if the current element is equal to the target. If it is, increment the count by 1.
+Return the Count: After the loop has finished, return the count which now contains the number of occurrences of the target in the array.
+
+*/
+
+/*
+
+function countOccurrences(numbers, target) {
+    return numbers.filter(number => number === target).length;
+}
+
+// Example usage:
+console.log(countOccurrences([1, 2, 3, 4, 2, 5, 2], 2)); // Output: 3
+console.log(countOccurrences([1, 1, 1, 1], 5)); // Output: 0
+
+
+*/
+
+/*
+Explanation:
+
+Filter Method: Use the filter method on the numbers array to create a new array that only contains elements equal to the target.
+Arrow Function: The filter method takes a callback function as an argument. This callback function takes each element (number) of the array and returns true if it matches the target, effectively filtering out all other elements.
+Length Property: Get the length of the resulting filtered array using the length property. This length represents the number of times the target appears in the original numbers array.
+*/
