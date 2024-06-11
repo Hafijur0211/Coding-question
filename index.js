@@ -1400,3 +1400,187 @@ Set: A Set is a collection of unique values. When you create a Set from an array
 Spread Operator (...): The spread operator is used to convert the Set back into an array.
 Function: The removeDuplicates function takes an array (nums) as input, converts it to a Set to remove duplicates, and then converts it back to an array using the spread operator.
 */
+
+// Question - 25
+
+/*
+Counter
+
+Once upon a time, there was a young girl named Emma who loved to play hopscotch. She would spend hours jumping and hopping on the squares drawn on the ground. One day, she decided to play a new version of hopscotch where she had to start at a specific square and then hop to the next square, one more than the previous square every time (n, n + 1, n + 2, etc). She found the game challenging and fun, but wished there was an easier way to keep track of which square she had to hop to next.
+Can you help Emma by writing a function that takes an integer n representing the starting square, and returns a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called, representing the next square Emma has to hop to.
+Example 1:
+Input: n = 10
+Output: [10,11,12]
+
+Example 2:
+Input: n = -2
+Output: [-2,-1,0]
+*/
+
+/*
+
+function hopscotchCounter(n) {
+    let currentSquare = n;
+    
+    // Return a function that serves as the counter
+    return function() {
+        const nextSquare = currentSquare;
+        currentSquare++;
+        return nextSquare;
+    };
+}
+
+// Example usage:
+const counter = hopscotchCounter(10);
+console.log(counter()); // Output: 10
+console.log(counter()); // Output: 11
+console.log(counter()); // Output: 12
+
+const negativeCounter = hopscotchCounter(-2);
+console.log(negativeCounter()); // Output: -2
+console.log(negativeCounter()); // Output: -1
+console.log(negativeCounter()); // Output: 0
+
+
+*/
+
+/*
+
+Explanation:
+Outer Function (hopscotchCounter): This function takes an integer n as a parameter and returns an inner function.
+Inner Function (Counter): The inner function, created by the outer function, serves as the counter. It keeps track of the current square (currentSquare) and returns it when called. Then, it increments currentSquare by 1 for the next call.
+Closure: The inner function maintains access to the currentSquare variable even after the outer function has returned, creating a closure.
+Example Usage: You can create a counter by calling hopscotchCounter with the starting square as an argument. Then, you can call the returned function repeatedly to get the next square to hop to.
+
+*/
+
+// Question 26
+
+/*
+
+Counter II
+Once upon a time, there was a young boy named Alex who loved to play with toy cars. He would spend hours racing them around the track he had built in his room. One day, he decided to keep track of the number of laps each car completed. He wanted to be able to increment the lap count, decrement it if he made a mistake, and reset it back to the starting lap count if needed. He wished there was an easier way to keep track of the lap count for each car.
+Can you help Alex by writing a function createCounter that accepts an initial integer init representing the starting lap count, and returns an object with three functions: increment() which increases the current lap count by 1 and then returns it, decrement() which reduces the current lap count by 1 and then returns it, and reset() which sets the current lap count back to init and then returns it?
+Example 1:
+Input: init = 5, calls = ["increment","reset","decrement"]
+Output: [6,5,4]
+Explanation:
+const counter = createCounter(5);
+counter.increment(); // 6
+counter.reset(); // 5
+counter.decrement(); // 4
+Example 2:
+Input: init = 0, calls = ["increment","increment","decrement","reset","reset"]
+Output: [1,0,-1]
+Explanation:
+const counter = createCounter(0);
+counter.increment(); // 1
+counter.reset(); // 0
+counter.decrement(); // -1
+
+*/
+
+/*
+function createCounter(init) {
+    let lapCount = init;
+
+    return {
+        increment: function() {
+            return ++lapCount;
+        },
+        decrement: function() {
+            return --lapCount;
+        },
+        reset: function() {
+            lapCount = init;
+            return lapCount;
+        }
+    };
+}
+
+// Example usage:
+const counter1 = createCounter(5);
+console.log(counter1.increment()); // Output: 6
+console.log(counter1.reset()); // Output: 5
+console.log(counter1.decrement()); // Output: 4
+
+const counter2 = createCounter(0);
+console.log(counter2.increment()); // Output: 1
+console.log(counter2.increment()); // Output: 2
+console.log(counter2.decrement()); // Output: 1
+console.log(counter2.reset()); // Output: 0
+console.log(counter2.reset()); // Output: 0
+
+*/
+
+/*
+Explanation:
+Outer Function (createCounter): This function takes an initial integer init representing the starting lap count and returns an object with methods to manipulate the lap count.
+Inner Object with Methods: The object returned by createCounter contains three methods: increment, decrement, and reset.
+increment: Increases the lap count by 1 and returns it.
+decrement: Decreases the lap count by 1 and returns it.
+reset: Sets the lap count back to the initial value init and returns it.
+Closure: Each method has access to the lapCount variable from the outer function, creating a closure that preserves the state of the lap count.
+*/
+
+// Question 27
+
+/*
+
+Chunk Array
+Once upon a time, there was a young girl named Sophie who loved to read books. She would spend hours lost in the pages of her favorite stories. One day, she decided to organize her bookshelf by dividing her books into smaller groups, or chunks, each containing a specific number of books. She wanted to be able to easily find and access her books, but she didn’t know how to divide them into chunks of the right size.
+Can you help Sophie by writing a function that takes an array arr representing her books and a chunk size size, and returns a chunked array? A chunked array contains the original elements in arr, but consists of subarrays each of length size. The length of the last subarray may be less than size if arr.length is not evenly divisible by size. You may assume the array is the output of JSON.parse. In other words, it is valid JSON. Please solve it without using lodash’s _.chunk function.
+Example 1:
+Input: arr = [1,2,3,4,5], size = 1
+Output: [[1],[2],[3],[4],[5]]
+Explanation: The arr has been split into subarrays each with 1 element.
+Example 2:
+Input: arr = [1,9,6,3,2], size = 3
+Output: [[1,9,6],[3,2]]
+Explanation: The arr has been split into subarrays with 3 elements. However, only two elements are left for the 2nd subarray.
+Example 3:
+Input: arr = [8,5,3,2,6], size = 6
+Output: [[8,5,3,2,6]]
+Explanation: Size is greater than arr.length thus all elements are in the first subarray.
+Example 4:
+Input: arr = [], size = 1
+Output: []
+Explanation: There are no elements to be chunked so an empty array is returned.
+
+*/
+
+/*
+
+function chunkArray(arr, size) {
+    // Initialize an array to store chunked subarrays
+    const chunkedArray = [];
+
+    // Loop through the array
+    for (let i = 0; i < arr.length; i += size) {
+        // Slice the array to get a chunk of 'size' elements
+        const chunk = arr.slice(i, i + size);
+        // Push the chunk into the chunked array
+        chunkedArray.push(chunk);
+    }
+
+    return chunkedArray;
+}
+
+// Example usage:
+console.log(chunkArray([1, 2, 3, 4, 5], 1)); // Output: [[1],[2],[3],[4],[5]]
+console.log(chunkArray([1, 9, 6, 3, 2], 3)); // Output: [[1,9,6],[3,2]]
+console.log(chunkArray([8, 5, 3, 2, 6], 6)); // Output: [[8,5,3,2,6]]
+console.log(chunkArray([], 1)); // Output: []
+
+
+*/
+
+/*
+
+Initialization: Initialize an empty array chunkedArray to store the chunked subarrays.
+Loop: Iterate through the input array arr. The loop increments by size on each iteration.
+Slice: Use the slice method to extract a chunk of size elements from the array starting at index i. This creates a new subarray (chunk) containing the chunked elements.
+Push: Push the chunk into the chunkedArray.
+Return: Return the chunkedArray containing the chunked subarrays.
+
+*/
