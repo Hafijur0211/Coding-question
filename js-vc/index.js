@@ -29,10 +29,22 @@
 const arrNumber = [1, 9, 87, 65, 655];
 const maxFunction = (arr) => {
   return arr.reduce(function (pre, cur) {
-    return pre > cur ? pre : cur;
+    return pre > cur ? pre : cur; 
   });
 };
 console.log(maxFunction(arrNumber));
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 3. What is difference between '==' and '===' in javascript
+
+// Both are comparison operator 
+// The difference between both the operator is that '==' is used to compare values whereas '===' is used to compare both value and types
+
+/*
+var x = 7;
+var y = '7'
+// console.log(x==7)
+console.log(x===7)
+*/
