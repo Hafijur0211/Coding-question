@@ -39,7 +39,7 @@ console.log(maxFunction(arrNumber));
 
 // 3. What is difference between '==' and '===' in javascript
 
-// Both are comparison operator 
+// Both are comparison operator
 // The difference between both the operator is that '==' is used to compare values whereas '===' is used to compare both value and types
 
 /*
@@ -48,3 +48,28 @@ var y = '7'
 // console.log(x==7)
 console.log(x===7)
 */
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+// 4. How to find the second largest value and remove first largest value in array
+
+/*
+step 1 : find largest value from array
+step 2 : find index of largest value
+step 3 : Delete index from array using splice method
+step 4 : apply same logic that used for find largest value
+*/
+
+/*
+const intArray = [2, 8, 9, 7];
+const largestValue = (arr) => {
+  firstLargestValue = Math.max(...arr);
+  index = arr.indexOf(firstLargestValue);
+  arr.splice(index, 1);
+  secondLargestValue = Math.max(...arr);
+  return secondLargestValue;
+};
+console.log(largestValue(intArray));
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
