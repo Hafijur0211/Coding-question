@@ -73,3 +73,66 @@ console.log(largestValue(intArray));
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 5. Difference between filter and find method
+
+/*
+filter() method return the matched values in an array from the collection 
+
+find() method return the first value that matches from the collection once it matches the value in finding, it will not check the remaining values in the array collection
+*/
+
+/*
+const empArr = [
+  {
+    name: "king",
+    age: 42,
+  },
+  {
+    name: "ali",
+    age: 32,
+  },
+  {
+    name: "ahmed",
+    age: 22,
+  },
+  {
+    name: "zain",
+    age: 62,
+  },
+  {
+    name: "ayesha",
+    age: 52,
+  },
+  {
+    name: "hafsha",
+    age: 28,
+  },
+  {
+    name: "sadi",
+    age: 27,
+  },
+  {
+    name: "rohma",
+    age: 26,
+  },
+  {
+    name: "masooma",
+    age: 25,
+  },
+];
+
+// const filteredItem = empArr.filter((item)=>{
+//   return item.age>30
+// })
+
+const findItem = empArr.find((item)=>{
+  return item.age>30
+})
+
+// console.log(filteredItem)
+console.log(findItem)
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
