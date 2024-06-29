@@ -137,7 +137,7 @@ console.log(findItem)
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 
-// 6. How to find the missing numbers in a given integer array of 1 to 10 
+// 6. How to find the missing numbers in a given integer array of 1 to 10
 
 /*
 
@@ -156,6 +156,24 @@ return(missArray)
 
 console.log(missingValue(arrNumbers))
 
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+// 7. How to find even or odd number in a given array in javascript
+
+/*
+const numbers = [1, 2, 3, 8, 9, 12, 16];
+
+const even = numbers.filter((item) => {
+  return item % 2 === 0;
+});
+const odd = numbers.filter((item) => {
+  return item % 2 !== 0;
+});
+
+console.log("odd numbers", odd);
+console.log("even numbers", even);
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
