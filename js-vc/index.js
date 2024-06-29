@@ -217,3 +217,31 @@ if (inputNum < 0) {
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 10. How to find the prime number in javascript
+
+/*
+
+// var number = prompt("enter number")
+
+let number = 3;
+
+if (number == 1) {
+  console.log(`${number} is not prime neither composite`);
+} else if (number < 1) {
+  console.log(`prime number of ${number} is not possible`);
+} else {
+  for (let i = 2; i < number; i++) {
+    if (number % i == 0) {
+      var result = `${number} is not prime number`;
+      break;
+    } else {
+      var result = `${number} is prime number`;
+    }
+  }
+  console.log(result);
+}
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
