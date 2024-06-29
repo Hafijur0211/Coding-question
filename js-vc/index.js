@@ -177,3 +177,20 @@ console.log("even numbers", even);
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 8. How to find the sum of all the elements in a given array[] in javascript 
+
+/*
+
+const arrNumber = [1,9,6,4]
+const sumOfNumbers = (arr)=>{
+  return arr.reduce((pre, cur)=>{
+    return pre+cur
+  })
+}
+
+console.log(sumOfNumbers(arrNumber))
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
