@@ -197,6 +197,8 @@ console.log(sumOfNumbers(arrNumber))
 
 // 9. How to find the factorial(n!) of a given number in javascript
 
+/*
+
 // const inputNum = prompt("please enter your number");
 
 const inputNum = 5;
@@ -212,3 +214,6 @@ if (inputNum < 0) {
   console.log(`Factorial of ${inputNum} is ${fact}`);
 }
 
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
