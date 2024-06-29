@@ -178,7 +178,7 @@ console.log("even numbers", even);
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 
-// 8. How to find the sum of all the elements in a given array[] in javascript 
+// 8. How to find the sum of all the elements in a given array[] in javascript
 
 /*
 
@@ -194,3 +194,21 @@ console.log(sumOfNumbers(arrNumber))
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 9. How to find the factorial(n!) of a given number in javascript
+
+// const inputNum = prompt("please enter your number");
+
+const inputNum = 5;
+
+let fact = 1;
+
+if (inputNum < 0) {
+  console.log(`Factorial of ${inputNum} is not possible`);
+} else {
+  for (let i = 1; i <= inputNum; i++) {
+    fact = fact * i;
+  }
+  console.log(`Factorial of ${inputNum} is ${fact}`);
+}
+
