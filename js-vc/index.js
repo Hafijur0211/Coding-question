@@ -315,3 +315,28 @@ console.log(reverseString("butter"));
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 13. How to find palindrome in javascript
+
+/*
+
+// const string = prompt('enter value')
+
+var string = "maam";
+
+string = string.toLowerCase();
+const palindromeFind = (str) => {
+  // reverse string
+  var reverseString = str.split("").reverse().join("");
+  if (reverseString === str) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(palindromeFind(string));
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
