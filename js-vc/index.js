@@ -271,4 +271,26 @@ if (
 
 */
 
+// Method 2
+
+/*
+
+// Second method to find the numbers of vowels
+
+var string = "hafijur";
+
+const vowels = ["a", "e", "i", "o", "u"];
+
+const countVowel = (str) => {
+  var count = 0;
+  for (let letter of str.toLowerCase()) {
+    if (vowels.includes(letter)) count++;
+  }
+  return count;
+};
+
+console.log(countVowel(string));
+
+*/
+
 // ------------------------------------------------------------------------------------------------------------------------------------
