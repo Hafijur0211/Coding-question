@@ -294,3 +294,24 @@ console.log(countVowel(string));
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 12. How to reverse a string in javascript
+
+/*
+
+const reverseString = (str) => {
+  var strToArray = str.split("");
+  var arrReverse = strToArray.reverse();
+  var strReverse = arrReverse.join("");
+  return strReverse;
+};
+
+// reverseString("butter")
+// var arr=['m', 'y']
+// console.log(arr.reverse())
+
+console.log(reverseString("butter"));
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
