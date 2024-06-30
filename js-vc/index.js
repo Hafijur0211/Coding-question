@@ -245,3 +245,25 @@ if (number == 1) {
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 11. How to find vowels from string in javascript
+
+/*
+
+// const string = prompt("Enter string")
+
+const string = "b";
+
+if (
+  string == "a" ||
+  string == "e" ||
+  string == "i" ||
+  string == "o" ||
+  string == "u"
+) {
+  console.log(`${string} is vowel`)
+}else{
+  console.log(`${string} is not vowel`)
+}
+
+*/
