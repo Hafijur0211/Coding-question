@@ -362,5 +362,36 @@ console.log(`value of a is ${a} and value of b is ${b}`);
 
 */
 
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+// 15. How to merge two arrays and sort them in javascript
+
+/*
+
+// Method 1
+
+const arr1 = ["1", "8", "9"];
+const arr2 = ["45", "7", "190"];
+
+// concat
+const finalArr = arr1.concat(arr2);
+const sorterdArr1 = finalArr.sort(function (a, b) {
+  return a - b;
+});
+
+// spread operator
+
+const result = [...arr1, ...arr2];
+const sorterdArr2 = finalArr.sort(function (a, b) {
+  return a - b;
+});
+// console.log(result)
+console.log(sorterdArr2);
+
+// console.log(finalArr)
+// console.log(sorterdArr1);
+
+*/
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------
