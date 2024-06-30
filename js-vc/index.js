@@ -248,11 +248,14 @@ if (number == 1) {
 
 // 11. How to find vowels from string in javascript
 
+// Method 1
+
 /*
 
 // const string = prompt("Enter string")
 
 const string = "b";
+string = string.toLowerCase();
 
 if (
   string == "a" ||
@@ -261,9 +264,11 @@ if (
   string == "o" ||
   string == "u"
 ) {
-  console.log(`${string} is vowel`)
-}else{
-  console.log(`${string} is not vowel`)
+  console.log(`${string} is vowel`);
+} else {
+  console.log(`${string} is not vowel`);
 }
 
 */
+
+// ------------------------------------------------------------------------------------------------------------------------------------
