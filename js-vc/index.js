@@ -340,3 +340,27 @@ console.log(palindromeFind(string));
 */
 
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 14. How to swap two variable without using third variable in javascript
+
+/*
+
+let a = 17;
+let b = 8;
+
+// with using third variable
+
+// let temp = a;
+// a = b;
+// b = temp;
+
+// without third variable
+
+[a, b] = [b,a]
+
+console.log(`value of a is ${a} and value of b is ${b}`);
+
+*/
+
+
+// ------------------------------------------------------------------------------------------------------------------------------------
