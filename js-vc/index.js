@@ -393,5 +393,15 @@ console.log(sorterdArr2);
 
 */
 
-
 // ------------------------------------------------------------------------------------------------------------------------------------
+
+// 16. How to find factor of a given integer in javascript
+
+const num = 12;
+for (let i = 0; i <= num; i++) {
+  if (num % i == 0) {
+    console.log(i);
+  }
+}
+
+console.log(`factor of ${num}`);
