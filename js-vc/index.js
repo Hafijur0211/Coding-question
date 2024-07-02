@@ -397,6 +397,8 @@ console.log(sorterdArr2);
 
 // 16. How to find factor of a given integer in javascript
 
+/*
+
 const num = 12;
 for (let i = 0; i <= num; i++) {
   if (num % i == 0) {
@@ -405,3 +407,37 @@ for (let i = 0; i <= num; i++) {
 }
 
 console.log(`factor of ${num}`);
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+// 17. Simple calculator in javascript
+
+/*
+
+// const operator = prompt("Please select operator either + - / *")
+
+const operator = "*";
+
+// const num1 = parseFloat(prompt('enter num 1'))
+// const num2 = parseFloat(prompt('enter num 2'))
+
+const num1 = 34;
+const num2 = 12;
+
+if (operator == "+") {
+  result = num1 + num2;
+}else if(operator == '-'){
+  result= num1 - num2
+}else if(operator == '*'){
+  result= num1 * num2
+}else{
+  result= num1 / num2
+}
+
+console.log(`${num1} ${operator} ${num2} = ${result}`);
+
+*/
+
+// ------------------------------------------------------------------------------------------------------------------------------------
